@@ -1,5 +1,5 @@
 {
-    "name": "radix-spectrum-monorepo",
+    "name": "radix-spectrum",
     "packageManager": "yarn@1.22.17",
     "private": true,
     "workspaces": [

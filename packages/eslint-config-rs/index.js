@@ -55,7 +55,5 @@ module.exports = {
         "node_modules",
         "coverage",
         "storybook-static",
-        "gql",
-        "__generated__",
     ],
 };
