@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { useLocalStorage } from "usehooks-ts";
 
 type Theme = "dark" | "light" | "system";
 
@@ -28,7 +29,7 @@ export function ThemeProvider({
     storageKey = "spectrum-ui-theme",
     ...props
 }: ThemeProviderProps) {
-    const [theme, setTheme] = useState<Theme>(() => (localStorage.getItem(storageKey) as Theme) || defaultTheme);
+    const [theme, setTheme] = useLocalStorage<Theme>(storageKey, defaultTheme);
 
     useEffect(() => {
         const root = window.document.documentElement;
